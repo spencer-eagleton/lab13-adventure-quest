@@ -1,18 +1,26 @@
-// IMPORT MODULES under test here:
-// import { example } from '../example.js';
 
 const test = QUnit.test;
 
-test('time to test a function', (expect) => {
+test('generate user returns userObject', (expect) => {
     //Arrange
     // Set up your arguments and expectations
-    const expected = true;
+    const expected = {
+        completed: {},
+        karma: 50,
+        crypto: 1,
+        user: 'daSpencerE',
+        metavatar: 'gamer-brah'
+    };
     
     //Act 
     // Call the function you're testing and set the result to a const
-    const actual = true;
+    const formData = new FormData();
+    formData.set('user', 'daSpencerE');
+    formData.set('metavatar', 'gamer-brah');
+
+    const actual = generateUser(formData);
 
     //Expect
     // Make assertions about what is expected versus the actual result
-    expect.equal(actual, expected);
+    expect.deepEqual(actual, expected);
 });
