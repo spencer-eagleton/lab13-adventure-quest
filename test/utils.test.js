@@ -39,3 +39,4 @@ test ('setUser sets userOBbject to local storage', (expect) => {
     const actual = JSON.parse(localStorage.getItem('USER'));
     expect.deepEqual(actual, userObject);
 });
+

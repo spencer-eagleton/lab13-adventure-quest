@@ -12,10 +12,12 @@ const img = document.getElementById('quest-image');
 img.src = `../assets/${questData.image}`;
 const description = document.getElementById('quest-description');
 description.textContent = questData.description;
+
+
 const questChoices = document.getElementById('quest-choices');
 
-
 for (let choice of questData.choices){
+    
     const label = document.createElement('label');
     label.textContent = choice.description;
     
@@ -25,6 +27,18 @@ for (let choice of questData.choices){
     input.name = 'choices';
     input.value = choice.id;
 
+   
+
+
+
     label.appendChild(input);
     questChoices.append(label);
 }
+
+const button = document.createElement('button');
+button.textContent = 'DECIDE';
+questChoices.append(button);
+
+button.addEventListener('submit', ()=>{
+    getUser
+});
