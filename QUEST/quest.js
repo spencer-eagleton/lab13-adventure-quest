@@ -25,6 +25,7 @@ for (let choice of questData.choices){
     const input = document.createElement('input');
     input.type = 'radio';
     input.name = 'choices';
+    input.required = true;
     input.value = choice.id;
 
    
@@ -39,6 +40,8 @@ const button = document.createElement('button');
 button.textContent = 'DECIDE';
 questChoices.append(button);
 
-button.addEventListener('submit', ()=>{
+questChoices.addEventListener('submit', (e)=>{
+    e.preventDefault();
+    
     getUser
 });

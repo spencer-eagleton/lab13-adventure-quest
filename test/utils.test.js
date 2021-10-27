@@ -1,4 +1,4 @@
-import { generateUser, setUser } from '../utils.js';
+import { generateUser, getUser, setUser } from '../utils.js';
 const test = QUnit.test;
 
 test('generate user returns userObject', (expect) => {
@@ -40,3 +40,20 @@ test ('setUser sets userOBbject to local storage', (expect) => {
     expect.deepEqual(actual, userObject);
 });
 
+test ('getUser should return LS USER  string as a parsed object', (expect) => {
+    localStorage.removeItem('USER');
+
+    const userObject = {
+        completed: {},
+        karma: 50,
+        crypto: 1,
+        user: 'daSpencerE',
+        metavatar: 'gamer-brah'
+    };
+    setUser(userObject);
+
+    const actual = getUser();
+    
+    expect.deepEqual(actual, userObject);
+
+});
