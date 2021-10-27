@@ -3,7 +3,7 @@ const chatroom = {
     id: 'chatroom',
     title: 'Brave the Chatroom',
     map: {},
-    image: '',
+    image: 'chatroom.png',
     description: `Welcome to the Chatroom. You enter only to encounter a hoard of Cyber-Bullies. The lead Cyber-Bully has challenged you to a political debate, and betting 30 crypto on the winner. How do you respond? `,
     choices: [{
         id: 'debate',
@@ -32,7 +32,7 @@ const amazonia = {
     id: 'amazonia',
     title: 'Coindom of Amazonia',
     map: {},
-    image: '',
+    image: 'bezos.jpg',
     description: `You have entered the capitalist Coindom of Amazonia. After navigating through the forest of AWS servers, you have earned the trust of a rag-tag army of Crypto-Warriors armed with only GME and AMC stonks. You lead the army to Bezos' Lair and encounter the dragon himself. He laughs at your puny investment and challenges you to a stonk-off. How do you command your army?`,
     choices: [{
         id: 'HODL',
@@ -59,7 +59,7 @@ const zuck = {
     id: 'zuck',
     title: 'Zuckerbergs Castle',
     map: {},
-    image: '',
+    image: 'zuck.jpg',
     description: '',
     choices: [{
         id: 'troll',

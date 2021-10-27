@@ -8,7 +8,7 @@ console.log(questLinks);
 
 for (let quest of quests){
     const a = document.createElement('a');
-    a.href = `./quest?id=${quest.id}`;
+    a.href = `../quest/?id=${quest.id}`;
     a.textContent = quest.title;
     questLinks.appendChild(a);
 
