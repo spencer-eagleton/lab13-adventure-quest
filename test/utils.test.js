@@ -1,4 +1,4 @@
-import { generateUser } from 'utils.js';
+import { generateUser, setUser } from '../utils.js';
 const test = QUnit.test;
 
 test('generate user returns userObject', (expect) => {
@@ -15,12 +15,27 @@ test('generate user returns userObject', (expect) => {
     //Act 
     // Call the function you're testing and set the result to a const
     const formData = new FormData();
-    formData.set('user', 'daSpencerE');
-    formData.set('metavatar', 'gamer-brah');
+    formData.set('name', 'daSpencerE');
+    formData.set('avatar', 'gamer-brah');
 
     const actual = generateUser(formData);
 
     //Expect
     // Make assertions about what is expected versus the actual result
     expect.deepEqual(actual, expected);
+});
+
+test ('setUser sets userOBbject to local storage', (expect) => {
+    localStorage.removeItem('USER');
+
+    const userObject = {
+        completed: {},
+        karma: 50,
+        crypto: 1,
+        user: 'daSpencerE',
+        metavatar: 'gamer-brah'
+    };
+    setUser(userObject);
+    const actual = JSON.parse(localStorage.getItem('USER'));
+    expect.deepEqual(actual, userObject);
 });
