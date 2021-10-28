@@ -17,13 +17,20 @@ export function generateUser(formData){
 }
 
 export function setUser(userObject){
-    const userString = JSON.stringify(userObject);
-    localStorage.setItem('USER', userString);
+
+    localStorage.setItem('USER', JSON.stringify(userObject));
 }
 
 export function getUser(){
-    const userString = localStorage.getItem('USER');
-    return JSON.parse(userString);
+    
+    return JSON.parse(localStorage.getItem('USER'));
 
+
+}
+
+export function scoreQuest(choiceObject, questID, userObject){
+    userObject.crypto += choiceObject.crypto;
+    userObject.karma += choiceObject.karma;
+    userObject.completed[questID] = true;
 
 }
