@@ -12,5 +12,5 @@ userForm.addEventListener('submit', (e)=>{
     const userObject = generateUser(formData);
 
     setUser(userObject);
-    window.location.replace('./map');
+    window.location.replace('./MAP');
 });
