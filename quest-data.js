@@ -36,20 +36,20 @@ const amazonia = {
     description: `You have entered the capitalist Coindom of Amazonia. After navigating through the forest of AWS servers, you have earned the trust of a rag-tag army of Crypto-Warriors armed with only GME and AMC stonks. You lead the army to Bezos' Lair and encounter the dragon himself. He laughs at your puny investment and challenges you to a stonk-off. How do you command your army?`,
     choices: [{
         id: 'HODL',
-        description: '',
+        description: 'HODL',
         result: 'You call out to your crypto army "DIAMOND HANDS" and the army holds on for dear life and you inspire the rest of the Meta-Verse to buy and hold. You take off to the moon and Bezos cedes his hoarded capital',
         karma: 10,
         crypto: 5000
     }, {
         id: 'buy',
         description: 'Command the Army to buy more stonks to match the power of Bezos',
-        result: '',
+        result: 'BUY STONKS',
         karma: 0,
         crypto: -5000
     }, {
         id: 'sell',
         description: '',
-        result: '',
+        result: 'SELL STONKS',
         karma: -30,
         crypto: -50
     }]
@@ -60,10 +60,10 @@ const zuck = {
     title: 'Zuckerbergs Castle',
     map: {},
     image: 'zuck.jpg',
-    description: '',
+    description: 'YOU ENTER THE CASTLE..',
     choices: [{
         id: 'troll',
-        description: '',
+        description: 'TROLL',
         result: '',
         karma: -50,
         crypto: -50 
