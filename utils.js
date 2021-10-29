@@ -1,4 +1,4 @@
-import quests from "./quest-data.js";
+import quests from './quest-data.js';
 
 export function findByID(items, id){
     for (let item of items){

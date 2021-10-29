@@ -4,8 +4,7 @@ import { findByID, getUser, scoreQuest, setUser } from '../utils.js';
 
 const params = new URLSearchParams(window.location.search);
 const questData = findByID(quests, params.get('id'));
-const questDetails = document.getElementById('quest-details');
-const questResults = document.getElementById('results');
+
 
 const title = document.getElementById('quest-title');
 title.textContent = questData.title;
