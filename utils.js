@@ -1,3 +1,5 @@
+import quests from "./quest-data.js";
+
 export function findByID(items, id){
     for (let item of items){
         if (item.id === id){
@@ -36,4 +38,13 @@ export function scoreQuest(choiceObject, questID, userObject){
     userObject.crypto += choiceObject.crypto;
     userObject.completed[questID] = true;
 
+}
+
+export function completesAllQuests(userObject){
+    for (let quest of quests){
+        if (!userObject.completed[quest.id]){
+            return false;
+        }
+    }
+    return true;
 }

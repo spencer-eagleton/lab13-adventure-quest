@@ -1,5 +1,5 @@
 import quests from '../quest-data.js';
-import { getUser } from '../utils.js';
+import { completesAllQuests, getUser } from '../utils.js';
 
 const questLinks = document.getElementById('quest-links');
 // <a href="./quest?id=chatroom">Brave the Forbidden Chatroom</a>
@@ -7,6 +7,18 @@ const questLinks = document.getElementById('quest-links');
 // <a href="./quest?id=zuck">Zuckerberg's Castle</a>
 
 const user = getUser();
+
+
+if (user.karma <= 0){
+    window.location.replace('../gameover');
+}
+
+if (completesAllQuests(user)){
+    window.location.replace('../youwin');
+}
+
+
+
 for (let quest of quests){
     if (user.completed[quest.id]){
         displaySpan(quest);
