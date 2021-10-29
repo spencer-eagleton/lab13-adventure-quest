@@ -53,4 +53,18 @@ questChoices.addEventListener('submit', (e)=>{
     scoreQuest(choice, questData.id, user);
     
     setUser(user);
+
+    // display result
+    const questDetails = document.getElementById('quest-details');
+    const questResults = document.getElementById('results');
+    questDetails.classList.add('hidden');
+    questResults.classList.remove('hidden');
+
+    const resultSpan = document.createElement('p');
+    resultSpan.textContent = choice.result;
+   
+    const backToMap = document.createElement('a');
+    backToMap.href = '../map';
+    backToMap.textContent = 'BACK TO MAP';
+    questResults.append(resultSpan, backToMap);
 });

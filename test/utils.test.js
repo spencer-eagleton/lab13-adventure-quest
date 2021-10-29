@@ -1,4 +1,4 @@
-import { generateUser, getUser, scoreQuest, setUser } from '../utils.js';
+import { completesAllQuests, generateUser, getUser, scoreQuest, setUser } from '../utils.js';
 const test = QUnit.test;
 
 test('generate user returns userObject', (expect) => {
@@ -80,4 +80,27 @@ test('scorequest should update crypto, karma and completed to UserObject', (expe
     expect.equal(userObject.crypto, 31);
     expect.equal(userObject.karma, 100);
     expect.equal(userObject.completed[questID], true);
+});
+
+test('completesAllQuests should return true if user has completed all quests', (expect)=>{
+    const userObject = {
+        completed: { chatroom: true, amazonia: true, zuck: true },
+        karma: 50,
+        crypto: 1,
+        user: 'daSpencerE',
+        metavatar: 'gamer-brah'
+    };
+    const actual = completesAllQuests(userObject);
+    expect.equal(actual, true);
+});
+test('completesAllQuests should return false if user has not completed all quests', (expect)=>{
+    const userObject = {
+        completed: { chatroom: true, amazonia: true, zuck: true },
+        karma: 50,
+        crypto: 1,
+        user: 'daSpencerE',
+        metavatar: 'gamer-brah'
+    };
+    const actual = completesAllQuests(userObject);
+    expect.equal(actual, true);
 });
