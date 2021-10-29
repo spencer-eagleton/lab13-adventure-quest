@@ -10,11 +10,11 @@ const user = getUser();
 
 
 if (user.karma <= 0){
-    window.location.replace('../gameover');
+    window.location.replace('../GAMEOVER');
 }
 
 if (completesAllQuests(user)){
-    window.location.replace('../youwin');
+    window.location.replace('../YOUWIN');
 }
 
 
@@ -30,7 +30,7 @@ for (let quest of quests){
 
 function displayLink(quest){
     const a = document.createElement('a');
-    a.href = `../quest/?id=${quest.id}`;
+    a.href = `../QUEST/?id=${quest.id}`;
     a.textContent = quest.title;
     questLinks.appendChild(a);
 
