@@ -64,7 +64,7 @@ questChoices.addEventListener('submit', (e)=>{
     resultSpan.textContent = choice.result;
    
     const backToMap = document.createElement('a');
-    backToMap.href = '../map';
+    backToMap.href = '../MAP';
     backToMap.textContent = 'BACK TO MAP';
     questResults.append(resultSpan, backToMap);
 });

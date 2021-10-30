@@ -36,8 +36,8 @@ const amazonia = {
     description: `You have entered the capitalist Coindom of Amazonia. After navigating through the forest of AWS servers, you have earned the trust of a rag-tag army of Crypto-Warriors armed with only GME and AMC stonks. You lead the army to Bezos' Lair and encounter the dragon himself. He laughs at your puny investment and challenges you to a stonk-off. How do you command your army?`,
     choices: [{
         id: 'HODL',
-        description: 'HODL',
-        result: 'You call out to your crypto army "DIAMOND HANDS" and the army holds on for dear life and you inspire the rest of the Meta-Verse to buy and hold. You take off to the moon and Bezos cedes his hoarded capital',
+        description: 'Hold on for dear life!',
+        result: 'You call out to your crypto army "DIAMOND HANDS". The army holds on for dear life, and you inspire the rest of the Meta-Verse to buy and hold. You take off to the moon and Bezos cedes his hoarded capital',
         karma: 10,
         crypto: 5000
     }, {
